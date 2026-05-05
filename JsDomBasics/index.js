@@ -45,7 +45,23 @@ More secure
 innerText
 → Sirf visible text
 → Hidden text ignore karta hai
+
+
+==================
+Add ement 
+--- document.createElement("h1"); <h1> </h1>
+-- bodyTAG.appendChild(fheadings);  -- use of append child always add in last of script
+
+-- decide where to add postion 
+ ---- insertAdjacentElement  need -
+  ------------------- postion - before begin , afterbegin , before end , after end
+                  --- html content
+
+ ======
+ // remove child        
 */
+
+
 
 console.log("js");
 
@@ -93,3 +109,50 @@ console.log(z);   // click me
 
 button.textContent = "Reset";  // sirf text change hoga
 // HTML tag treat nahi karega
+
+
+// add
+
+let fheadings = document.createElement("h1");
+
+fheadings.textContent = "my name is raushan ";
+console.log(fheadings);
+
+let bodyTAG = document.querySelector("body");
+
+bodyTAG.appendChild(fheadings);
+console.log(bodyTAG);
+
+
+//
+//    <div>
+//       hello jee
+//       <div id="myDiv">
+//         <p>first</p>
+//         <h1>second</h1>
+//         <p>third</p>
+//       </div>
+//     </div>
+
+let mydiv = document.querySelector("#myDiv");
+console.log(mydiv);
+
+let newElement = document.createElement("span");
+
+newElement.textContent = " this is span";
+
+console.log(newElement);   // now i want to insert in postions inside div
+
+mydiv.insertAdjacentElement("afterend", newElement);
+
+// inn my div - this is span print before h 
+// <div>
+//       hello jee ------------- here --- this is span -- before bgin
+// ----------- here --- this is span --  afterend
+//       <div id="myDiv">
+//         <p>first</p>
+//         <h1>second</h1>
+//         <p>third</p>
+// ------------------------------ this is span -- before end // afterend
+
+console.log(mydiv);
