@@ -140,6 +140,8 @@ console.log(mydiv);
 let newElement = document.createElement("span");
 
 newElement.textContent = " this is span";
+document.querySelector('body').appendChild(newElement);
+document.querySelector('body').removeChild(newElement);
 
 console.log(newElement);   // now i want to insert in postions inside div
 
