@@ -106,6 +106,22 @@ function sayMynam()
     console.log(" 2nd line but ascy code rasuahan chala after 2 sec iske v koi gurnatee ni ");
 }
 //
+/*
+ - ek object h jo - asycn code ke future value ko represent krat h 
+ -- 3 state 
+ --- pending - food preparing 
+ --- fulfilled - orde complete 
+ ---- rejected - order cancel 
+
+ let promise = new Promise((resolve, reject) => {
+
+    always write asycn code using promses 
+
+
+
+
+*/
+
 Promise.resolve().then( fun );
 
 function fun()
